@@ -12,6 +12,6 @@ def recursive_fac(n):
         return 1
     return recursive_fac(n-1)*n
 
-# Der rekursiven Implementierung geht l der Speicher vergleichsweise sehr schnel aus. 
 
-
+# Der rekursiven Implementierung geht der Speicher schnell aus. 
+# Iterativ kann die Eingabe um Größenordungen größer sein. 
