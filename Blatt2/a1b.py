@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 N = [10,100,1000]
-fig, axes = plt.subplots(nrows=1, ncols=len(N), figsize=(len(N)*5, 3))
+fig, axes = plt.subplots(nrows=1, ncols=len(N), figsize=(len(N)*5, 4))
 
 i = 0
 
@@ -14,9 +14,10 @@ for n in N:
     mean = n*p
     axes[i].bar(k, binom.pmf(k, n, p),  label=str(n), color='red')
     axes[i].plot(np.arange(0, n + 1, 0.01), norm.pdf(np.arange(0, n + 1, 0.01), mean, standard_derivation))
-    axes[i].title.set_text('n = ' + str(n))
+    mean_diff = np.abs(mean - binom.mean(n, p))
+    std_difference = np.abs(norm.std(n, p) - standard_derivation)
+    axes[i].title.set_text('n = ' + str(n) + '\n' + '$|\mu_{Bin}-\mu_{Norm}|$ = '+ str(round(mean_diff,3)) +  '\n' + '$|\sigma_{Bin}-\sigma_{Norm}|$ = ' + str(round(std_difference, 3)))
     i += 1
-
 
 plt.show()
 
