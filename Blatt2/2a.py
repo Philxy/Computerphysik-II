@@ -21,5 +21,5 @@ plt.title('Poissonverteilung der Punktmutationen')
 plt.show()
 
 
-# Aus der errechneten Poissonverteilung können Wahrscheinlichkeiten
-# von verschiedenen Anzahlen an Punktmutationen abgelesen werden.
+# Aus der errechneten Poissonverteilung können die Wahrscheinlichkeiten
+# verschiedener Anzahlen an Punktmutationen abgelesen werden.
